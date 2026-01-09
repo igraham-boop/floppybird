@@ -376,20 +376,22 @@ Screen - Game
    LSN HELICOPTER RESKIN
    ============================== */
 
+/* NOTE: style.css is inside /css, so assets must be referenced with ../assets/... */
+
 #background {
-  background-image: url("assets/reskin/city-bg.png") !important;
+  background-image: url("../assets/reskin/city-bg.png") !important;
   background-repeat: repeat-x !important;
   background-size: auto 100% !important;
 }
 
 #land {
-  background-image: url("assets/reskin/street-ground.png") !important;
+  background-image: url("../assets/reskin/street-ground.png") !important;
   background-repeat: repeat-x !important;
   background-size: auto 100% !important;
 }
 
 #player {
-  background-image: url("assets/reskin/helicopter.png") !important;
+  background-image: url("../assets/reskin/helicopter.png") !important;
   background-repeat: no-repeat !important;
   background-size: contain !important;
   image-rendering: pixelated !important;
@@ -404,7 +406,7 @@ Screen - Game
   width: 65%;
   height: 35%;
   transform: translateX(-50%);
-  background: url("assets/reskin/helicopter-rotor.png") no-repeat center / contain;
+  background: url("../assets/reskin/helicopter-rotor.png") no-repeat center / contain;
   image-rendering: pixelated;
   animation: rotorSpin 0.08s linear infinite;
   pointer-events: none;
@@ -418,9 +420,10 @@ Screen - Game
 .pipe,
 .pipe_upper,
 .pipe_lower {
-  background-image: url("assets/reskin/building.png") !important;
+  background-image: url("../assets/reskin/building.png") !important;
   background-repeat: repeat-y !important;
   background-size: 100% auto !important;
   border: none !important;
   box-shadow: none !important;
 }
+
