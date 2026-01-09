@@ -372,3 +372,60 @@ Screen - Game
    text-decoration: none;
    color: #fff;
 }
+/* ==============================
+   LSN HELICOPTER RESKIN
+   ============================== */
+
+/* ---- BACKGROUND: CITY ---- */
+#background {
+  background-image: url("assets/reskin/city-bg.png") !important;
+  background-repeat: repeat-x !important;
+  background-size: auto 100% !important;
+}
+
+/* ---- GROUND: STREET ---- */
+#land {
+  background-image: url("assets/reskin/street-ground.png") !important;
+  background-repeat: repeat-x !important;
+  background-size: auto 100% !important;
+}
+
+/* ---- PLAYER: HELICOPTER ---- */
+#player {
+  background-image: url("assets/reskin/helicopter.png") !important;
+  background-repeat: no-repeat !important;
+  background-size: contain !important;
+  image-rendering: pixelated !important;
+  position: relative !important;
+}
+
+/* ---- HELICOPTER ROTOR (SPINS) ---- */
+#player::before {
+  content: "";
+  position: absolute;
+  top: -22%;
+  left: 50%;
+  width: 65%;
+  height: 35%;
+  transform: translateX(-50%);
+  background: url("assets/reskin/helicopter-rotor.png") no-repeat center / contain;
+  image-rendering: pixelated;
+  animation: rotorSpin 0.08s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes rotorSpin {
+  from { transform: translateX(-50%) rotate(0deg); }
+  to   { transform: translateX(-50%) rotate(360deg); }
+}
+
+/* ---- PIPES → BUILDINGS ---- */
+.pipe,
+.pipe_upper,
+.pipe_lower {
+  background-image: url("assets/reskin/building.png") !important;
+  background-repeat: repeat-y !important;
+  background-size: 100% auto !important;
+  border: none !important;
+  box-shadow: none !important;
+}
